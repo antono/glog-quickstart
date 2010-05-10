@@ -6,10 +6,14 @@ date: 2010-05-10
 
 ## Quickstart
 
+
     git clone git://github.com/antono/glog-quickstart.git
+    cd glog-quickstart
     gem install bundler
     bundle install
-    rackup
+    unicorn
+
+Open http://localhost:8080/ in your favorite [Chromium](http://www.chromium.org/).
 
 ## Pages and Templates
 
