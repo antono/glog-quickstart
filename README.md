@@ -6,6 +6,6 @@
     bundle install
     unicorn
 
-Open http://localhost:8080/ in your favorite [Chromium](http://www.chromium.org/).
+Open [http://localhost:8080/](http://localhost:8080/) in your favorite [Chromium](http://www.chromium.org/).
 
 Tailor example code as you with until You get the site done.
