@@ -1,0 +1,23 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset => 'utf-8' }
+    %title= page.title
+    %link{ :rel => 'stylesheet', :href => '/stylesheets/global.css' }
+  %body
+    %header
+      %h1= page.title
+
+    %section{ :id => 'about' }
+      ~ page.to_html
+
+    %nav
+      %h2 Example Pages
+      %ul
+        - pages.all.each do |page|
+          %li
+            %a{ :href => page.path_with_parent }= page.title
+
+    %footer
+      &copy; #{Date.today.year}
+      %a{ :href => 'http://antono.info/' } Antono Vasiljev

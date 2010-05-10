@@ -1,0 +1,49 @@
+//
+// Variable definitions
+//
+$bg: #eee
+$fg: #444
+
+@import 960gs.sass
+
+// html5 stuff
+article, aside, dialog, figure, footer, header, hgroup, nav, section
+  display: block
+
+body
+  font-family: 'Trebuchet MS'
+  font-size: 1.5em
+
+h1, h2, h3
+  font-weight: bold
+  -webkit-mask-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.65)))
+
+
+header, section, footer, nav
+  +grid-container
+
+header
+  padding-top: 25px
+
+footer
+  color: gray
+  font-size: small
+
+a
+  color: #3768A5
+  -webkit-transition: color
+  -webkit-transition-timing-function: ease-in-out
+  -webkit-transition-duration: 500ms
+  &:visited
+    color: #56739D
+  &:hover
+    color: red
+  img
+    border: 0
+
+ul
+  list-style-type: square
+
+#contact
+  a
+    text-decoration: none

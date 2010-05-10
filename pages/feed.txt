@@ -1,0 +1,5 @@
+---
+title: Feed Example
+template: feed
+date: 2010-05-10
+---

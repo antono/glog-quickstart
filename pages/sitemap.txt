@@ -1,0 +1,5 @@
+---
+title: Sitemap Example
+date: 2010-05-10
+template: sitemap
+---

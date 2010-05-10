@@ -1,0 +1,21 @@
+!!! XML
+- posts = pages.all.sort_by { |p| p.date }.reverse.first(15)
+%feed{ :xmlns => "http://www.w3.org/2005/Atom" }
+  %id http://glog.antono.info/
+  %title Glog Example Feed
+  %link{ :href => 'http://example.com/' }
+  %link{ :rel => 'self', :href => "http://example.com/feed"}
+  %generator{ :uri => "http://github.com/antono/glog", :version => "1.0" } Glog
+  %author
+    %name Antono Vasiljev
+    %uri http://antono.info/
+    %email antono.vasiljev@gmail.com
+  - posts.each do |post|
+    %entry
+      %title= post.title
+      %id= "http://example.com/" + post.path_with_parent
+      %link{ :rel => 'alternate', :type => 'text/html', :href => "http://example.com" + post.path_with_parent }
+      %content{ :type => 'xhtml' }
+        %div{ :xmlns => "http://www.w3.org/1999/xhtml" }~ post.to_html
+      %author
+        %name Antono Vasiljev
